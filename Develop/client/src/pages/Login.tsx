@@ -10,6 +10,7 @@ const Login = () => {
     username: '',
     password: ''
   });
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -24,8 +25,10 @@ const Login = () => {
     try {
       const data = await login(loginData);
       Auth.login(data.token);
+      setErrorMessage(null);
     } catch (err) {
       console.error('Failed to login', err);
+      setErrorMessage('Invalid username or password');
     }
   };
 
@@ -33,14 +36,15 @@ const Login = () => {
     <div className='container'>
       <form className='form' onSubmit={handleSubmit}>
         <h1>Login</h1>
-        <label >Username</label>
+        {errorMessage && <p style={{color:'maroon', fontSize:'20px'}}className="error">{errorMessage}</p>}
+        <label>Username</label>
         <input 
           type='text'
           name='username'
           value={loginData.username || ''}
           onChange={handleChange}
         />
-      <label>Password</label>
+        <label>Password</label>
         <input 
           type='password'
           name='password'
@@ -50,7 +54,6 @@ const Login = () => {
         <button type='submit'>Login</button>
       </form>
     </div>
-    
   )
 };
 
