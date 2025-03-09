@@ -4,7 +4,11 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Link to Application
+
 ## Screenshot
+![Link Required](./Develop/client/src/assets/Screenshot%202025-03-09%20at%207.05.08 PM.png)
+![Login Page](./Develop/client/src/assets/Screenshot%202025-03-09%20at%207.05.19 PM.png)
+![Kanban Board](./Develop/client/src/assets/Screenshot%202025-03-09%20at%207.05.41 PM.png)
 
 ## Table of Contents
 - [Description](#description)
