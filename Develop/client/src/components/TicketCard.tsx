@@ -29,7 +29,7 @@ const TicketCard = ({ ticket, deleteTicket }: TicketCardProps) => {
       <p>{ticket.description}</p>
       <p>{ticket.assignedUser?.username}</p>
       <Link to='/edit' state={{id: ticket.id}} type='button' className='editBtn'>Edit</Link>
-      <button type='button' value={String(ticket.id)} onClick={handleDelete} className='deleteBtn'>Delete</button>
+      <button style={{color:'white', backgroundColor:'#b864c4'}} type='button' value={String(ticket.id)} onClick={handleDelete} className='deleteBtn'>Delete</button>
     </div>
   );
 };

@@ -3,6 +3,8 @@ import { useState, FormEvent, ChangeEvent } from "react";
 import Auth from '../utils/auth';
 import { login } from "../api/authAPI";
 
+import './Login.css';
+
 const Login = () => {
   const [loginData, setLoginData] = useState({
     username: '',
@@ -45,7 +47,7 @@ const Login = () => {
           value={loginData.password || ''}
           onChange={handleChange}
         />
-        <button type='submit'>Submit Form</button>
+        <button type='submit'>Login</button>
       </form>
     </div>
     
