@@ -1,5 +1,6 @@
 .env
 dist
+!dist/seeds
 .DS_Store
 node_modules
 package-lock.json
